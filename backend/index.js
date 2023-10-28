@@ -22,9 +22,9 @@ app.use((req, res, next) => {
 
   
 
-app.use('/api', studentRoutes.routes);
+app.use('/api/students', studentRoutes.routes);
 app.use('/api/buses', busRoutes.routes);
-app.use('/api/drivers', driverRoutes);
+app.use('/api/drivers', driverRoutes.routes);
 
 
 

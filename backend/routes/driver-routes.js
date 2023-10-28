@@ -1,10 +1,10 @@
 const express = require('express');
-const { addDriver,
-    getAllDrivers,
-    getDriver,
-    updateDriver,
-    deleteDriver
-} = require('../controllers/driverController');
+const { addDriver, 
+        getAllDrivers, 
+        getDriver, 
+        updateDriver, 
+        deleteDriver 
+      } = require('../controllers/driverController'); // Assuming you have a "driverController" with the relevant functions.
 
 const router = express.Router();
 
@@ -16,4 +16,4 @@ router.delete('/:id', deleteDriver);
 
 module.exports = {
     routes: router
-}
+};
