@@ -6,9 +6,9 @@ const firestore = firebase.firestore();
 
 const addBus = async (req, res, next) => {
     try {
+
             const data = req.body;
             const busData = {
-                id: data.id,
                 licenceNo: data.licenceNo,
                 capacity: data.capacity,
                 plateNo: data.plateNo,

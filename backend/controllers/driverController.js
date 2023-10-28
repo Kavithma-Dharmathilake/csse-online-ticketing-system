@@ -8,9 +8,10 @@ const addDriver = async (req, res, next) => {
     try {
         const data = req.body;
         const driverData = {
-            id: data.id,
             name: data.name,
             contact: data.contact,
+            age:data.age,
+            address:data.address,
             licenceNo: data.licenceNo
         };
 
@@ -34,7 +35,9 @@ const getAllDrivers = async (req, res, next) => {
                     doc.id,
                     doc.data().name,
                     doc.data().contact,
-                    doc.data().licenceNo
+                    doc.data().licenceNo,
+                    doc.data().age,
+                    doc.data().address
                 );
                 driversArray.push(driver);
             });
